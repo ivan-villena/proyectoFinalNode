@@ -1,0 +1,30 @@
+[
+  {
+    "id":1,
+    "name": "Iván",
+    "lastName": "Villena",
+    "email": "ivan.pieszko@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id":2,
+    "name": "Ezequiel",
+    "lastName": "Soto",
+    "email": "sotoezequiel93@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id":3,
+    "name": "Brian",
+    "lastName": "Sosa",
+    "email": "briansolutech@gmail.com",
+    "password": "1234"
+  },
+  {
+    "id":4,
+    "name": "Alejo",
+    "lastName": "Márquez",
+    "email": "malejojeremias@gmail.com",
+    "password": "1234"
+  }  
+]

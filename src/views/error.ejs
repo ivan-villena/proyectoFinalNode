@@ -1,0 +1,16 @@
+
+<%-include("./partials/head")%>
+
+<main class="container error">
+  
+  <article>    
+
+    <h1><%= data.titulo ? data.titulo : "Error"%></h1>
+    
+    <p><%= data.detalle ? data.detalle : ""%></p>
+
+  </article>
+
+</main>
+
+<%-include("./partials/foot")%>
