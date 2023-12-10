@@ -1,7 +1,7 @@
 
 const fs = require("node:fs");
 
-const Valor = require("../utils/Valor.js")
+const Valor = require("../utils/Valor.js");
 
 const categorys = JSON.parse( fs.readFileSync("./src/data/categorys.json", "utf-8") );
 

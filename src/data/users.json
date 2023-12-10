@@ -4,27 +4,27 @@
     "name": "Iván",
     "lastName": "Villena",
     "email": "ivan.pieszko@gmail.com",
-    "password": "1234"
+    "password": "$2b$05$ecqOx8/jUBpKVwukBp28TerM3DE1pmJkVHxXkp6BzMBIgXjLCDkDm"
   },
   {
     "id":2,
     "name": "Ezequiel",
     "lastName": "Soto",
     "email": "sotoezequiel93@gmail.com",
-    "password": "1234"
+    "password": "$2b$05$ecqOx8/jUBpKVwukBp28TerM3DE1pmJkVHxXkp6BzMBIgXjLCDkDm"
   },
   {
     "id":3,
     "name": "Brian",
     "lastName": "Sosa",
     "email": "briansolutech@gmail.com",
-    "password": "1234"
+    "password": "$2b$05$ecqOx8/jUBpKVwukBp28TerM3DE1pmJkVHxXkp6BzMBIgXjLCDkDm"
   },
   {
     "id":4,
     "name": "Alejo",
     "lastName": "Márquez",
     "email": "malejojeremias@gmail.com",
-    "password": "1234"
+    "password": "$2b$05$ecqOx8/jUBpKVwukBp28TerM3DE1pmJkVHxXkp6BzMBIgXjLCDkDm"
   }  
 ]

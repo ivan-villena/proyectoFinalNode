@@ -3,13 +3,15 @@ const fs = require("node:fs");
 
 const Valor = require("../utils/Valor.js")
 
-const products = JSON.parse( fs.readFileSync("./src/data/products.json", "utf-8") );
-
 const licenceModel = require("./licenceModel.js");
 
 const categoryModel = require("./categoryModel.js");
 
 const cuotasModel = require("./cuotasModel.js");
+
+/* Cargo archivo completo */
+
+const products = JSON.parse( fs.readFileSync("./src/data/products.json", "utf-8") );
 
 /* cargo objetos relacioados */
 
@@ -28,7 +30,7 @@ function cargar_relaciones ( Product ) {
 
 module.exports = { 
 
-  ver : ( filtros = {} ) => {
+  ver : ( filtros ) => {
 
     let listado = Valor.filtrar( products, filtros );
 

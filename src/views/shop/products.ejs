@@ -13,7 +13,7 @@
 
         <div class="form__col">
           <label class="form__label" for="buscar_producto">BUSCAR</label>
-          <input class="form__control" type="text" id="buscar_producto" name="buscar" placeholder="item o categoría">
+          <input class="form__control" type="text" id="buscar_producto" name="buscar" placeholder="item o categoría" value="<%=Operador.buscar ? Operador.buscar : ''%>">
         </div>
 
         <div class="form__col">
@@ -21,11 +21,11 @@
           <label class="form__label" for="buscardor-ordenar">ORDENAR</label>
 
           <select class="form__control" name="ordenar" id="buscardor-ordenar">
-            <option value="" default="2" selected="1" disabled="1"></option>
-            <option value="A-Z">Alfabético A-Z</option>
-            <option value="Z-A">Alfabético Z-A</option>
-            <option value="9-1">Precio de Mayor a Menor</option>
-            <option value="1-9">Precio de Menor a Mayor</option>
+            <option value="" default="2" disabled="1"<%=!Operador.ordenar ? ' selected="1"' : ''%>></option>
+            <option value="A-Z"<%=Operador.ordenar == 'A-Z' ? ' selected="1"' : ''%>>Alfabético A-Z</option>
+            <option value="Z-A"<%=Operador.ordenar == 'Z-A' ? ' selected="1"' : ''%>>Alfabético Z-A</option>
+            <option value="9-1"<%=Operador.ordenar == '9-1' ? ' selected="1"' : ''%>>Precio de Mayor a Menor</option>
+            <option value="1-9"<%=Operador.ordenar == '1-9' ? ' selected="1"' : ''%>>Precio de Menor a Mayor</option>
           </select>
 
         </div>
@@ -36,10 +36,10 @@
 
           <div class="form__row">
             <label class="form__label" for="buscador-precio_minimo">MIN</label>
-            <input class="form__control" type="number" name="precio_minimo" id="buscador-precio_minimo" min="1" placeholder="0">
+            <input class="form__control" type="number" name="precio_minimo" id="buscador-precio_minimo" min="1" placeholder="0" value="<%=Operador.precio_minimo ? Operador.precio_minimo : ''%>">
             <span class="margin-1">-</span>
             <label class="form__label" for="buscador-precio_maximo">MAX</label>
-            <input class="form__control" type="number" name="precio_maximo" id="buscador-precio_maximo" min="1" placeholder="0">
+            <input class="form__control" type="number" name="precio_maximo" id="buscador-precio_maximo" min="1" placeholder="0" value="<%=Operador.precio_maximo ? Operador.precio_maximo : ''%>">
           </div>
 
         </div>
@@ -50,19 +50,19 @@
 
           <ul class="check__list">
             <li class="check__item">
-              <input class="form__control" type="checkbox" name="nuevo" id="buscador-filtro_nuevo">
+              <input class="form__control" type="checkbox" name="nuevo" id="buscador-filtro_nuevo"<%=Operador.nuevo ? ' checked="1"' : ''%>>
               <label class="form__label" for="buscador-filtro_nuevo">NUEVOS</label>
             </li>
             <li class="check__item">
-              <input class="form__control" type="checkbox" name="oferta" id="buscador-filtro_oferta">
+              <input class="form__control" type="checkbox" name="oferta" id="buscador-filtro_oferta"<%=Operador.oferta ? ' checked="1"' : ''%>>
               <label class="form__label" for="buscador-filtro_oferta">OFERTAS</label>
             </li>
             <li class="check__item">
-              <input class="form__control" type="checkbox" name="especial" id="buscador-filtro_especial">
+              <input class="form__control" type="checkbox" name="especial" id="buscador-filtro_especial"<%=Operador.especial ? ' checked="1"' : ''%>>
               <label class="form__label" for="buscador-filtro_especial">EDICIÓN ESPECIAL</label>
             </li>
             <li class="check__item">
-              <input class="form__control" type="checkbox" name="favorito" id="buscador-filtro_favorito">
+              <input class="form__control" type="checkbox" name="favorito" id="buscador-filtro_favorito"<%=Operador.favorito ? ' checked="1"' : ''%>>
               <label class="form__label" for="buscador-filtro_favorito">FAVORITOS</label>
             </li>
           </ul>

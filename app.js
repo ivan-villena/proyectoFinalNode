@@ -19,7 +19,7 @@ const Session = require('./src/middlewares/Session.js');
 
 require('dotenv').config();
 
-/* erroes */
+/* pagina para erroes */
 const Page = require("./src/middlewares/Page.js");
 
 /* ejecutamos express para comenzar a usar sus metodos */

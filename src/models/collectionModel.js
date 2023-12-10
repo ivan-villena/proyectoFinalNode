@@ -3,11 +3,11 @@ const fs = require("node:fs");
 
 const Valor = require("../utils/Valor.js")
 
-const collections = JSON.parse( fs.readFileSync("./src/data/collections.json", "utf-8") );
-
 const productModel = require("./productModel.js");
 
 const licenceModel = require("./licenceModel.js");
+
+const collections = JSON.parse( fs.readFileSync("./src/data/collections.json", "utf-8") );
 
 /* cargo objetos relacioados */
 

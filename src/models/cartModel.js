@@ -1,9 +1,11 @@
 
 const fs = require("node:fs");
 
-const carts = JSON.parse( fs.readFileSync("./src/data/carts.json", "utf-8") );
+const Valor = require("../utils/Valor.js");
 
 const productModel = require("./productModel.js");
+
+const carts = JSON.parse( fs.readFileSync("./src/data/carts.json", "utf-8") );
 
 /* Cargo Objetos Relacionales */
 
@@ -33,7 +35,7 @@ function cargar_relaciones( Cart ) {
 
 module.exports = {
 
-  ver : ( filtros = {} ) => {
+  ver : ( filtros ) => {
   
     let listado = Valor.filtrar( carts, filtros );
 

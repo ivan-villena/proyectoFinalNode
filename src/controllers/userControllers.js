@@ -1,4 +1,6 @@
 
+const bcrypt = require("bcrypt");
+
 const userModel = require("../models/userModel.js");
 
 module.exports = {
@@ -32,9 +34,11 @@ module.exports = {
 
     const User = userModel.ver({ email });
 
-    if( User) {
+    if( User ) {
 
-      if( User.password === password ){
+      // hasheo password recibido y comparo con el guardado: 1234
+
+      if( bcrypt.compareSync( password, User.password ) ){
 
         // cargo usuario en sesion
         req.session.user = User.id;
@@ -43,6 +47,7 @@ module.exports = {
       }
 
       return res.status(401).render("error",{
+        
         head: { 
           title: "Login"
         },
@@ -96,6 +101,14 @@ module.exports = {
 
   // proceso: registrar el usuario
   registerProcess: ( req, res ) => {    
+
+    // valores del form
+    User = req.body;
+
+    // hashear el password:
+    User.password = bcrypt.hashSync( User.password, 5 );
+
+    // ...guardar los datos
 
   }
 }

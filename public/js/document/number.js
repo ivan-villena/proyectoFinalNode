@@ -2,21 +2,36 @@
 
 /* agrego eventos a los botones */
 
-[ "add", "remove" ].forEach( tipo => 
-  
-  Array.from( document.querySelectorAll(`.number__button--${tipo}`) ).forEach( btn => 
-    
-    btn.addEventListener('click',number) 
-  ) 
+for( const tipo of [ "add", "remove" ] ){
 
-);
+  for( const button of Array.from( document.querySelectorAll(`div.number .number__button--${tipo}`) ) ){
+
+    button.addEventListener('click',number_change);
+  }
+}
+
+/* valido lo que ingresa el usuario */
+
+for( const input of Array.from( document.querySelectorAll(`div.number input[type="text"]`) ) ){
+
+  input.addEventListener('input',number_validate);
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* controlador numérico */
 
-function number( event ){
+function number_validate( event ){
+
+  const input = event.target;
+
+  const value = Number(input.value);
+
+  input.value = value || value == 0 ? value : '';
+}
+
+function number_change( event ){
 
   let button = event.target;
 
